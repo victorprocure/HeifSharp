@@ -1,0 +1,3 @@
+[submodule "src/HeifNative"]
+	path = src/HeifNative
+	url = git@github.com:victorprocure/heif.git
