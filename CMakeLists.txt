@@ -7,3 +7,4 @@ project (heif LANGUAGES CXX C)
 
 # Include sub-projects.
 add_subdirectory ("src/HeifNative/srcs")
+add_subdirectory("src/HeifSharp.Wrapper/api-csharp")
