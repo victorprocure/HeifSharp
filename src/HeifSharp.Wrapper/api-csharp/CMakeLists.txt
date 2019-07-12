@@ -10,16 +10,15 @@ endif()
 
 set(api_cpp_path "../../HeifNative/srcs/api-cpp")
 
-set(sources
-    AACDecoderConfiguration.cpp
-    AlternativeTrackGroup.cpp
-    )
+file(GLOB EXPORT_SOURCES "*.cpp")
+
+source_group("" FILES ${EXPORT_SOURCES})
 
 add_library( # Sets the name of the library.
            heifsharp
            # Sets the library as a shared library.
            SHARED
-           ${sources}
+           ${EXPORT_SOURCES}
            )
 
 target_link_libraries(heifsharp heifpp)
