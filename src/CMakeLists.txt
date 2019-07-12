@@ -3,8 +3,10 @@
 #
 cmake_minimum_required (VERSION 3.3.2 FATAL_ERROR)
 
-project (heif LANGUAGES CXX C)
+project (HeifSharp LANGUAGES CXX C)
 
 # Include sub-projects.
-add_subdirectory ("src/HeifNative/srcs")
-add_subdirectory("src/HeifSharp.Wrapper/api-csharp")
+set(heif_native_src "HeifNative/srcs")
+add_subdirectory("${heif_native_src}")
+
+add_subdirectory("HeifSharp.Wrapper/api-csharp")

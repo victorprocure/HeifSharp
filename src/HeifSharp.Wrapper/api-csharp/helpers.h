@@ -7,6 +7,8 @@
 #define DLL_API __declspec(dllimport)
 #endif
 
+#define CONCAT(a, b) a##b
+
 using namespace HEIFPP;
 
 #define CHECK_PTR_RETURN_VAL(objToCheck, retVal) \
