@@ -2,13 +2,9 @@ cmake_minimum_required(VERSION 3.4.1)
 
 project(heifsharp LANGUAGES CXX C)
 
-if (TARGET heifpp)
-    message("using existing heifpp target")
-else()
-    add_subdirectory("../../" ${PROJECT_BINARY_DIR}/heif)
-endif()
-
 set(api_cpp_path "../../HeifNative/srcs/api-cpp")
+
+include_directories("${api_cpp_path}")
 
 file(GLOB EXPORT_SOURCES "*.cpp")
 
