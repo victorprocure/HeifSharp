@@ -54,5 +54,5 @@ HEIF::ErrorCode AVCDecoderConfigurationSetConfig(AVCDecoderConfiguration* avcDec
     CHECK_PTR_RETURN_VAL(avcDecoderConfiguration, HEIF::ErrorCode::UNINITIALIZED);
     CHECK_PTR_RETURN_VAL(data, HEIF::ErrorCode::DECODER_CONFIGURATION_ERROR);
 
-    avcDecoderConfiguration->setConfig(data, size);
+    return avcDecoderConfiguration->setConfig(data, size);
 }
